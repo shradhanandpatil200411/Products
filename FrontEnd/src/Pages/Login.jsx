@@ -1,23 +1,31 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { NavLink } from "react-router";
+import { useDispatch } from "react-redux";
+import { asyncLoginUser, asyncRegisterUser } from "../Store/Actions/userAction";
+import { nanoid } from "@reduxjs/toolkit";
 
 function Login() {
-  const [signUp, setSignUp] = useState(true);
-  const { register, reset, handleSubmit } = useForm();
-  const submitHandler = (user) => {
-    console.log(user);
-    reset();
-  };
+  const [signUp, setSignUp] = useState(false);
+  const dispatch = useDispatch();
 
-  const handleSignUp = () => {
-    setSignUp(!signUp);
+  const { register, reset, handleSubmit } = useForm();
+
+  const handelSignUp = (user) => {
+    user.id = nanoid();
+    if (signUp) {
+      dispatch(asyncRegisterUser(user));
+      setSignUp(!signUp);
+    } else {
+      dispatch(asyncLoginUser(user));
+    }
+
+    reset();
   };
 
   return (
     <>
       <form
-        onSubmit={handleSubmit(submitHandler)}
+        onSubmit={handleSubmit(handelSignUp)}
         className={`w-7/12 h-[70vh] mx-auto mt-10 ${
           signUp ? "flex-row-reverse" : ""
         } rounded-2xl overflow-hidden flex bg-white shadow-medium shadow-2xl`}>
@@ -29,96 +37,59 @@ function Login() {
           </h1>
 
           <div className='px-5'>
-            {signUp ? (
-              <>
-                <div className='relative '>
-                  <label
-                    className='absolute -top-5 text-light font-thin'
-                    htmlFor='fullname'>
-                    Fullname
-                  </label>
-                  <input
-                    {...register("fullname")}
-                    type='text'
-                    className='border-1 border-light w-full rounded outline-light my-1 py-1 px-2 '
-                    name='fullname'
-                    id='fullname'
-                  />
-                </div>
-                <div className='relative my-5'>
-                  <label
-                    className='absolute -top-5 text-light font-thin'
-                    htmlFor='username'>
-                    Username
-                  </label>
-                  <input
-                    {...register("username")}
-                    type='text'
-                    className='border-1 border-light w-full rounded outline-light my-1 py-1 px-2 '
-                    name='username'
-                    id='username'
-                  />
-                </div>
-                <div className='relative my-5'>
-                  <label
-                    className='absolute -top-5 text-light font-thin'
-                    htmlFor='password'>
-                    Password
-                  </label>
-                  <input
-                    {...register("password")}
-                    type='password'
-                    className='border-1 border-light w-full rounded outline-light my-1 py-1 px-2 '
-                    name='password'
-                    id='password'
-                  />
-                </div>
-              </>
-            ) : (
-              <>
-                <div className='relative my-5'>
-                  <label
-                    className='absolute -top-5 text-light font-thin'
-                    htmlFor='username'>
-                    Username
-                  </label>
-                  <input
-                    {...register("username")}
-                    type='text'
-                    className='border-1 border-light w-full rounded outline-light my-1 py-1 px-2 '
-                    name='username'
-                    id='username'
-                  />
-                </div>
-                <div className='relative my-5'>
-                  <label
-                    className='absolute -top-5 text-light font-thin'
-                    htmlFor='password'>
-                    Password
-                  </label>
-                  <input
-                    {...register("password")}
-                    type='password'
-                    className='border-1 border-light w-full rounded outline-light my-1 py-1 px-2 '
-                    name='password'
-                    id='password'
-                  />
-                </div>
-              </>
+            {signUp && (
+              <div className='relative '>
+                <label
+                  className='absolute -top-5 text-light font-thin'
+                  htmlFor='username'>
+                  Username
+                </label>
+                <input
+                  {...register("username")}
+                  type='text'
+                  className='border-1 border-light w-full rounded outline-light my-1 py-1 px-2 '
+                  name='username'
+                  id='username'
+                  placeholder='example.username'
+                />
+              </div>
             )}
 
+            <div className='relative my-5'>
+              <label
+                className='absolute -top-5 text-light font-thin'
+                htmlFor='email'>
+                Email
+              </label>
+              <input
+                {...register("email")}
+                type='text'
+                className='border-1 border-light w-full rounded outline-light my-1 py-1 px-2 '
+                name='email'
+                id='email'
+                placeholder='example@gmail.com'
+              />
+            </div>
+            <div className='relative my-5'>
+              <label
+                className='absolute -top-5 text-light font-thin'
+                htmlFor='password'>
+                Password
+              </label>
+              <input
+                {...register("password")}
+                type='password'
+                className='border-1 border-light w-full rounded outline-light my-1 py-1 px-2 '
+                name='password'
+                id='password'
+                placeholder='********'
+              />
+            </div>
+
             <div className='mx-auto w-fit my-5 '>
-              {signUp ? (
-                <button
-                  onClick={handleSignUp}
-                  className='px-4 w-44 py-2 bg-medium text-white rounded font-semibold cursor-pointer hover:bg-light duration-500 '>
-                  Sign Up
-                </button>
-              ) : (
-                <button className='px-4 w-44 py-2 bg-medium text-white rounded font-semibold cursor-pointer hover:bg-light duration-500 '>
-                  Sign In
-                </button>
-              )}
+              <button className='px-4 w-44 py-2 bg-medium text-white rounded font-semibold cursor-pointer hover:bg-light duration-500 '>
+                {signUp ? "Sign Up" : " Sign In"}
+              </button>
             </div>
           </div>
         </div>

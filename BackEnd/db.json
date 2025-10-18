@@ -1,14 +1,17 @@
 {
   "user": [
     {
-      "id": "1",
-      "username": "example.name",
-      "email": "example@gmail.com",
-      "password": "123456"
+      "id": "3BvFpb3PtSpS9WChIhlvD",
+      "username": "_vicky__patil___",
+      "password": "123456",
+      "email": "shradhanandpatil123@gmail.com"
     }
   ],
   "product": [
-    { "id": "1", "text": "a comment about post 1", "postId": "1" }
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    }
   ]
- 
 }

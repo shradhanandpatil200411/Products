@@ -13,5 +13,4 @@ const userSlice = createSlice({
 });
 
 export default userSlice.reducer;
-// eslint-disable-next-line no-unused-vars
-const { loadUser } = userSlice.actions;
+export const { loadUser } = userSlice.actions;
