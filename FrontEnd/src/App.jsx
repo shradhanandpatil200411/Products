@@ -11,7 +11,7 @@ function App() {
     dispatch(asyncCurrentUser());
   }, []);
   return (
-    <div className='w-screen h-screen bg-dark text-white '>
+    <div className='w-screen  bg-dark text-white '>
       <Navbar />
       <MainRoutes />
       <ToastContainer />

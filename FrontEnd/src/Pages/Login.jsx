@@ -3,20 +3,24 @@ import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import { asyncLoginUser, asyncRegisterUser } from "../Store/Actions/userAction";
 import { nanoid } from "@reduxjs/toolkit";
+import { useNavigate } from "react-router";
 
 function Login() {
   const [signUp, setSignUp] = useState(false);
   const dispatch = useDispatch();
 
   const { register, reset, handleSubmit } = useForm();
+  const navigate = useNavigate();
 
   const handelSignUp = (user) => {
     user.id = nanoid();
+    user.isAdmin = false;
     if (signUp) {
       dispatch(asyncRegisterUser(user));
       setSignUp(!signUp);
     } else {
       dispatch(asyncLoginUser(user));
+      navigate("/produces");
     }
 
     reset();

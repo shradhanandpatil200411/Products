@@ -3,15 +3,25 @@
     {
       "id": "3BvFpb3PtSpS9WChIhlvD",
       "username": "_vicky__patil___",
+      "isaAdmin": true,
       "password": "123456",
       "email": "shradhanandpatil123@gmail.com"
+    },
+    {
+      "id": "M0vNpppYhVhSrhC2U8miD",
+      "email": "yash@gmail.com",
+      "password": "123456",
+      "username": "yash.patil",
+      "isAdmin": false
     }
   ],
   "product": [
     {
-      "id": "1",
-      "text": "a comment about post 1",
-      "postId": "1"
+      "id": "ScsLrOBZSfyuHoIfyfGbz",
+      "name": "Sony 108 cm (43 inches) BRAVIA 2M2 Series 4K Ultra HD Smart LED Google TV K-43S25M2-3 Years Warranty for Limited Period",
+      "imageUrl": "https://m.media-amazon.com/images/I/813Px6LpWmL._SX679_.jpg",
+      "dec": "Connectivity: 4 HDMI ports to connect set top box, Blu Ray players, gaming console | 2 USB ports to connect hard drives and other USB devices Sound : 20 Watts Output | 2ch | Open Baffle Speaker| DTS Digital Surround | DTS:X | Dolby Atmos, Dolby Audio",
+      "price": "41,790"
     }
   ]
 }
