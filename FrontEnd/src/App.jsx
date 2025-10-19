@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import Navbar from "./Components/Navbar";
 import MainRoutes from "./Routes/mainRoutes";
 import { ToastContainer } from "react-toastify";
@@ -11,7 +11,7 @@ function App() {
     dispatch(asyncCurrentUser());
   }, []);
   return (
-    <div className='w-screen  bg-dark text-white '>
+    <div className='w-screen h-screen overflow-x-hidden bg-dark text-white '>
       <Navbar />
       <MainRoutes />
       <ToastContainer />

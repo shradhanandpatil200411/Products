@@ -22,6 +22,48 @@
       "imageUrl": "https://m.media-amazon.com/images/I/813Px6LpWmL._SX679_.jpg",
       "dec": "Connectivity: 4 HDMI ports to connect set top box, Blu Ray players, gaming console | 2 USB ports to connect hard drives and other USB devices Sound : 20 Watts Output | 2ch | Open Baffle Speaker| DTS Digital Surround | DTS:X | Dolby Atmos, Dolby Audio",
       "price": "41,790"
+    },
+    {
+      "id": "URMPze_D_vYP9qD1AisAT",
+      "name": "Apple iPhone 15 (128 GB) - Black",
+      "imageUrl": "https://m.media-amazon.com/images/I/31KxpX7Xk7L._SY300_SX300_QL70_FMwebp_.jpg",
+      "dec": "DYNAMIC ISLAND COMES TO IPHONE 15 — Dynamic Island bubbles up alerts and Live Activities — so you don’t miss them while you’re doing something else. You can see who’s calling, track your next ride, check your flight status, and so much more.",
+      "price": "49,999"
+    },
+    {
+      "id": "benN95Mb8-APGaklCAUSD",
+      "name": "Butterfly Smart 4 Burner Glass Top Gas Stove | Manual Ignition | Scratch Resistant Toughened Glass | Brass Burners | Skid-proof Legs | 1 Year Manufacturer's Warranty | Black",
+      "imageUrl": "https://m.media-amazon.com/images/I/41im0ARZ+4L._SY300_SX300_QL70_FMwebp_.jpg",
+      "dec": "Ergonomically designed with a precisely angled metal frame featuring a diamond cut design, this stove provides effortless access to controls, enhancing your cooking experience",
+      "price": "3,999"
+    },
+    {
+      "id": "CV0DGocVDqCfC0nrPKZCa",
+      "name": "Amazon Brand - Symbol Men's Cotton Rich Solid Polo Tshirt | Collar Tshirts | Half Sleeves | Plain-Regular Fit (Available in Plus Size and Combo Pack of 2)",
+      "imageUrl": "https://m.media-amazon.com/images/I/713n+TxyfCL._SY879_.jpg",
+      "dec": "Premium Fabric Blend: Made with 60% cotton and 40% polyester for a soft touch and breathability. Ribbed Collar & Cuffs: Enhanced with full Lycra for",
+      "price": "479"
+    },
+    {
+      "id": "lqNnXUXelHFkskisXKzru",
+      "name": "iQOO Neo 10R 5G (Moonknight Titanium, 8GB RAM, 256GB Storage) | Snapdragon 8s Gen 3 Processor | India's Slimmest 6400mAh Battery Smartphone | Segment's Most Stable 90FPS for 5 Hours",
+      "imageUrl": "https://m.media-amazon.com/images/I/41UC0ARSbRL._SY300_SX300_QL70_FMwebp_.jpg",
+      "dec": "POWERFUL PERFORMACE: The fastest* processor in the segment powered by Snapdragon 8s Gen3 mobile platform with 4nm TSMC process, 1.7Mn+ Antutu Score. In addition to that, it has LPDRR5X, UFS 4.1 only in 256GB variant, 12GB + 12GB extended RAM & IP65 rated for dust and water resistance.",
+      "price": "26,998"
+    },
+    {
+      "id": "pALZgdEp_LiA_WccloAHe",
+      "name": "Apple iPhone 15 (128 GB) - Black",
+      "imageUrl": "https://m.media-amazon.com/images/I/71657TiFeHL._SX679_.jpg",
+      "dec": "DYNAMIC ISLAND COMES TO IPHONE 15 — Dynamic Island bubbles up alerts and Live Activities — so you don’t miss them while you’re doing something else. You can see who’s calling, track your next ride, check your flight status, and so much more.",
+      "price": "49,999"
+    },
+    {
+      "id": "Do8-3vLI57nn0wlwdqmjt",
+      "name": "Apple iPhone 15 (128 GB) - Pink",
+      "imageUrl": "https://m.media-amazon.com/images/I/71v2jVh6nIL._SX679_.jpg",
+      "dec": "DYNAMIC ISLAND COMES TO IPHONE 15 — Dynamic Island bubbles up alerts and Live Activities — so you don’t miss them while you’re doing something else. You can see who’s calling, track your next ride, check your flight status, and so much more.",
+      "price": "49,999"
     }
   ]
 }

@@ -18,7 +18,7 @@ function Navbar() {
 
   return (
     <>
-      <nav className='bg-dark shrink-0 text-white w-screen font-thin flex justify-between gap-5 px-10 py-5 backdrop-blur-2xl items-center'>
+      <nav className='bg-dark shrink-0 text-white font-thin flex justify-between gap-5 px-10 py-5 backdrop-blur-2xl items-center'>
         <div className='flex justify-evenly w-[40%]'>
           <NavLink
             className={(e) => (e.isActive ? "text-extra-light" : "")}
@@ -27,13 +27,13 @@ function Navbar() {
           </NavLink>
           <NavLink
             className={(e) => (e.isActive ? "text-extra-light" : "")}
-            to='/produces'>
-            Produces
+            to='/products'>
+            Products
           </NavLink>
           <NavLink
             className={(e) => (e.isActive ? "text-extra-light" : "")}
             to='/createProduce'>
-            Create Produces
+            Create Products
           </NavLink>
 
           {userData.length > 0 ? (

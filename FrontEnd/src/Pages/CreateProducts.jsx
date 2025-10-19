@@ -2,23 +2,26 @@ import { nanoid } from "@reduxjs/toolkit";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { asyncCreateProduct } from "../Store/Actions/productAction";
+import { useNavigate } from "react-router";
 
-function CreateProduct() {
+function CreateProducts() {
   const [name, setName] = useState("Product Name");
   const [imageUrl, setImageUrl] = useState("../../public/Img/product.png");
   const [dec, setDec] = useState("Product Description");
   const [price, setPrice] = useState("Price");
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const submitHandler = (e) => {
     e.preventDefault();
     const productData = { name, imageUrl, dec, price };
     productData.id = nanoid();
     dispatch(asyncCreateProduct(productData));
+    navigate("/products");
   };
   return (
     <>
-      <div className='flex justify-around  mx-auto rounded-xl px-5 py-10  bg-gray-900 shadow-light shadow-2xl w-8/12 mt-10'>
+      <div className='flex justify-around   mx-auto rounded-xl px-5 py-10  bg-gray-900 shadow-light shadow-2xl w-8/12 mt-10'>
         <div className='border rounded-2xl flex flex-col w-5/12 h-10/12 p-5 cursor-pointer'>
           <div className=''>
             <img className='w-full' src={imageUrl} alt='product-img' />
@@ -118,4 +121,4 @@ function CreateProduct() {
   );
 }
 
-export default CreateProduct;
+export default CreateProducts;
