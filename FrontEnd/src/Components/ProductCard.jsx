@@ -1,8 +1,9 @@
 import React from "react";
+import { NavLink } from "react-router";
 
-function ProductCard({ name, imageUrl, dec, price }) {
+function ProductCard({ name, imageUrl, dec, price, id }) {
   return (
-    <div className='w-[30%]'>
+    <NavLink to={`/admin/product-details/${id}`} className='w-[30%]'>
       <div className='border rounded-2xl flex flex-col w-full h-[80%] p-5 cursor-pointer'>
         <div className='w-full h-[60%]'>
           <img className='w-full h-full' src={imageUrl} alt='product-img' />
@@ -14,7 +15,7 @@ function ProductCard({ name, imageUrl, dec, price }) {
             <small className='text-extra-light'>more</small>
           </p>
           <div className='flex gap-3 justify-between mt-2'>
-            <p className='font-bold text-extra-light'> Rs {price}</p>
+            <p className='font-bold text-extra-light'> ₹{price}</p>
             <button
               className='cursor-pointer px-4 py- bg-light font-semibold rounded'
               type='button'>
@@ -23,7 +24,7 @@ function ProductCard({ name, imageUrl, dec, price }) {
           </div>
         </div>
       </div>
-    </div>
+    </NavLink>
   );
 }
 

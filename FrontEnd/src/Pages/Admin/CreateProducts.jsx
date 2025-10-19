@@ -1,7 +1,7 @@
 import { nanoid } from "@reduxjs/toolkit";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { asyncCreateProduct } from "../Store/Actions/productAction";
+import { asyncCreateProduct } from "../../Store/Actions/productAction";
 import { useNavigate } from "react-router";
 
 function CreateProducts() {
@@ -33,7 +33,7 @@ function CreateProducts() {
               <small className='text-extra-light'>more</small>
             </p>
             <div className='flex gap-3 justify-between mt-2'>
-              <p className='font-bold text-extra-light'> Rs {price}</p>
+              <p className='font-bold text-extra-light'> ₹ {price}</p>
               <button
                 className='cursor-pointer px-4 py- bg-light font-semibold rounded'
                 type='button'>

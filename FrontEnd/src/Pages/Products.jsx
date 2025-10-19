@@ -21,6 +21,7 @@ function Products() {
             imageUrl={product.imageUrl}
             dec={product.dec}
             price={product.price}
+            id={product.id}
           />
         ))}
       </div>

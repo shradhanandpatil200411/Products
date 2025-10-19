@@ -32,7 +32,7 @@ function Navbar() {
           </NavLink>
           <NavLink
             className={(e) => (e.isActive ? "text-extra-light" : "")}
-            to='/createProduce'>
+            to='/admin/create-products'>
             Create Products
           </NavLink>
 

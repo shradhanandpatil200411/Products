@@ -20,7 +20,7 @@ function Login() {
       setSignUp(!signUp);
     } else {
       dispatch(asyncLoginUser(user));
-      navigate("/produces");
+      navigate("/products");
     }
 
     reset();
